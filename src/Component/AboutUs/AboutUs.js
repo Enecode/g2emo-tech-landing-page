@@ -27,9 +27,9 @@ const AboutImage = styled('img')({
   marginBottom: '10px',
 });
 
-const AboutTitle = styled('h2')({
-  margin: '10px 0',
-});
+// const AboutTitle = styled('h2')({
+//   margin: '10px 0',
+// });
 
 const AboutDescription = styled('p')({
   textAlign: 'center',
