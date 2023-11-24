@@ -12,8 +12,9 @@ function App() {
     <div >
       <NavBar />
       <HeroPage />
-      <WhoWeAre />
       <AboutUs />
+      <WhoWeAre />
+      
       <ContactUs />
       <Footer />
     </div>

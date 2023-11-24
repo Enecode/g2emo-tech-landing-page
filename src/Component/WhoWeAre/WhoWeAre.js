@@ -10,7 +10,7 @@ const WhoWeAreContainer = styled('div')({
   flexDirection: 'column',
   alignItems: 'center',
   padding: '20px',
-  backgroundColor: '#000000',
+  backgroundColor: '#ffffff',
 });
 
 const WhoWeAreSection = styled('div')({
@@ -24,8 +24,8 @@ const WhoWeAreSection = styled('div')({
 const WhoWeAreContent = styled('div')({
   display: 'flex',
   flexDirection: 'row',
-  // alignItems: 'center',
-  textAlign: 'center',
+  alignItems: 'left',
+  textAlign: 'left',
   marginLeft: '16%',
 });
 

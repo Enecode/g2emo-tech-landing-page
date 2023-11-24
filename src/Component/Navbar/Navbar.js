@@ -6,6 +6,9 @@ import Logo from '../../Component/Assets/G2EMO_LOGO_White.png';
 
 const NavbarContainer = styled('div')({
     flexGrow: 1,
+    backgroundColor: '#ffc000',
+    color: '#000000',
+    
 });
 
 const NavbarLogo = styled('img')({
@@ -16,7 +19,7 @@ const NavbarLogo = styled('img')({
 const NavbarMenu = styled('div')(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
         display: 'flex',
-        marginLeft: '130px',
+        marginLeft: '300px',
         alignItems: 'center',
     },
 }));
@@ -32,6 +35,7 @@ const NavbarMenuItem = styled(ListItem)(({ theme }) => ({
     },
 }));
 
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -41,7 +45,7 @@ const Navbar = () => {
 
     return (
         <NavbarContainer>
-            <AppBar position="static">
+            <AppBar position="static" sx={{ backgroundColor: 'rgb(41,83,100)'}}>
                 <Toolbar>
                     <NavbarLogo src={Logo} alt="Logo" />
 
@@ -64,7 +68,7 @@ const Navbar = () => {
                             onClose={toggleMenu}
                             sx={{ display: { xs: 'block', md: 'none' } }}
                         >
-                            <List>
+                            <List sx={{ color: '#ffffff', backgroundColor: '#ffc000'  }}>
                                 <NavbarMenuItem button>
                                     <ListItemText primary="About" />
                                 </NavbarMenuItem>
@@ -78,7 +82,7 @@ const Navbar = () => {
                                     <ListItemText primary="Demo" />
                                 </NavbarMenuItem>
                                 <NavbarMenuItem button>
-                                    <ListItemText primary="Tech News" />
+                                    <ListItemText  primary="Tech News" />
                                 </NavbarMenuItem>
                             </List>
                         </Drawer>

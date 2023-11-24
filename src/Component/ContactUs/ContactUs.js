@@ -2,24 +2,43 @@ import React from 'react';
 import { styled } from '@mui/system';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
-// Styled components
-const ContactUsContainer = styled('div')({
-  display: 'flex',
-  justifyContent: 'space-around',
-  alignItems: 'flex-start',
-  padding: '20px',
-  flexDirection: 'column',
-  textAlign: 'center',
-  '@media (min-width: 768px)': {
-    flexDirection: 'row',
+const ContactUsContainer = styled('div')(({ theme }) => ({
+  [theme.breakpoints.up('md')]: {
+    display: 'flex',
+    backgroundColor: '#000000',
+    justifyContent: 'space-around',
+    alignItems: 'flex-start',
+    padding: '30px',
+    flexDirection: 'column',
+    textAlign: 'center',
+   
+    '@media (min-width: 768px)': {
+      flexDirection: 'row',
+    },
+
+    '@media (min-width: 1200px)': {
+      flexDirection: 'row',
   },
-});
+
+    '@media (min-width: 320px)': {
+      flexDirection: 'column',
+      margin: '10px',
+    },
+      
+    }
+}));
+
+
 
 const ContactForm = styled('div')({
   width: '100%',
+  padding: '35px',
+  marginRight: '35px',
+  backgroundColor: '#ffc000',
+  borderRadius: '10px',
   '@media (min-width: 768px)': {
     width: '50%',
-  },
+  }, 
 });
 
 const FormTitle = styled('h2')({
@@ -33,6 +52,8 @@ const FormGroup = styled('div')({
 const FormLabel = styled('label')({
   display: 'block',
   marginBottom: '5px',
+  textAlign: 'left',
+  padding: '10px'
 });
 
 const FormInput = styled('input')({
@@ -52,8 +73,8 @@ const FormTextarea = styled('textarea')({
 });
 
 const SubmitButton = styled('button')({
-  backgroundColor: '#4CAF50',
-  color: '#fff',
+  backgroundColor: '#82828412',
+  color: '#ffffff',
   padding: '10px 20px',
   border: 'none',
   borderRadius: '5px',
@@ -62,7 +83,10 @@ const SubmitButton = styled('button')({
 });
 
 const ContactInfo = styled('div')({
-  width: '100%',
+  padding: '95px',
+  borderRadius: '10px',
+  backgroundColor: '#ffc000',
+  height: 'auto',
   '@media (min-width: 768px)': {
     width: '50%',
   },
@@ -105,17 +129,17 @@ const SocialIcons = styled('div')({
 });
 
 const SocialIcon = styled('a')({
-  color: '#333',
+  color: '#ffffff',
   margin: '0 10px',
   fontSize: '24px',
   textDecoration: 'none',
+  paddingBottom: '139px',
   transition: 'color 0.3s',
   '&:hover': {
-    color: '#4CAF50',
+    color: '#ffc000',
   },
 });
 
-// Main ContactUs component
 function ContactUs() {
   return (
     <ContactUsContainer>
